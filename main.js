@@ -9,14 +9,18 @@ let randomNumber;
 
 function getRandomNumber(max) {
     return Math.ceil(Math.random() * max);
+
 }
-console.log(getRandomNumber(100)); // para ver que numero aleatorio sale
+randomNumber = getRandomNumber(100);
+console.log(randomNumber); // para ver que numero aleatorio sale
 
 // 
 function compareNumber() {
-    const inputValue = input.value;
+    const inputValue = parseInt(input.value);
     console.log(inputValue);
-    if (inputValue === randomNumber) {
+    if (inputValue < 1 || inputValue > 100) {
+        text.innerHTML = "El numero tiene que estar entre 1 y 100";
+    } else if (inputValue === randomNumber) {
         text.innerHTML = "Has ganado campeona!";
     } else if (inputValue > randomNumber) {
         text.innerHTML = "Demasiado alto";
@@ -33,7 +37,6 @@ function attemptNumber() {
 
 function handleClick(ev) {
     ev.preventDefault();
-    randomNumber = getRandomNumber(100);
     compareNumber();
     attemptNumber();
     numberText.innerHTML = `Numero de intentos: ${attempt}`;
