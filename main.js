@@ -22,7 +22,7 @@ function compareNumber() {
         text.innerHTML = "Demasiado alto";
     } else if (inputValue < randomNumber) {
         text.innerHTML = "Demasiado bajo";
-}
+    }
 }
 
 let attempt = 0;
