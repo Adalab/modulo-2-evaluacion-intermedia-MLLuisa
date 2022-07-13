@@ -17,12 +17,12 @@ function compareNumber() {
     const inputValue = parseInt(input.value);
     if (inputValue < 1 || inputValue > 100) {
         text.innerHTML = "El numero tiene que estar entre 1 y 100";
-    } else if (inputValue === randomNumber) {
-        text.innerHTML = "Has ganado campeona!";
     } else if (inputValue > randomNumber) {
         text.innerHTML = "Demasiado alto";
     } else if (inputValue < randomNumber) {
         text.innerHTML = "Demasiado bajo";
+    } else {
+        text.innerHTML = "Has ganado campeona!!!";
     }
 }
 
