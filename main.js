@@ -9,15 +9,12 @@ let randomNumber;
 
 function getRandomNumber(max) {
     return Math.ceil(Math.random() * max);
-
 }
 randomNumber = getRandomNumber(100);
-console.log(randomNumber); // para ver que numero aleatorio sale
+console.log(randomNumber); // para ver que numero aleatorio sale//
 
-// 
 function compareNumber() {
     const inputValue = parseInt(input.value);
-    console.log(inputValue);
     if (inputValue < 1 || inputValue > 100) {
         text.innerHTML = "El numero tiene que estar entre 1 y 100";
     } else if (inputValue === randomNumber) {
@@ -41,6 +38,5 @@ function handleClick(ev) {
     attemptNumber();
     numberText.innerHTML = `Numero de intentos: ${attempt}`;
 }
-
 
 button.addEventListener('click' , handleClick);
