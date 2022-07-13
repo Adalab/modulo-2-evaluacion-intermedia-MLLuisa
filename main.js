@@ -6,6 +6,7 @@ const text = document.querySelector('.js-text');
 const numberText = document.querySelector('.js-numberText');
 
 let randomNumber;
+let attempt = 0;
 
 function getRandomNumber(max) {
     return Math.ceil(Math.random() * max);
@@ -25,8 +26,6 @@ function compareNumber() {
         text.innerHTML = "Has ganado campeona!!!";
     }
 }
-
-let attempt = 0;
 
 function attemptNumber() {
     attempt += 1;
