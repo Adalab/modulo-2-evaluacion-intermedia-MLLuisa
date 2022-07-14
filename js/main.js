@@ -11,19 +11,24 @@ let attempt = 0;
 function getRandomNumber(max) {
     return Math.ceil(Math.random() * max);
 }
-randomNumber = getRandomNumber(100);
+randomNumber = getRandomNumber(100)
+
 console.log(randomNumber); // para ver que numero aleatorio sale//
+
+function printText(string) {
+    return text.innerHTML = string;
+}
 
 function compareNumber() {
     const inputValue = parseInt(input.value);
     if (inputValue < 1 || inputValue > 100) {
-        text.innerHTML = "El numero tiene que estar entre 1 y 100";
+        printText("El numero tiene que estar entre 1 y 100");
     } else if (inputValue > randomNumber) {
-        text.innerHTML = "Demasiado alto";
+        printText("Demasiado alto");
     } else if (inputValue < randomNumber) {
-        text.innerHTML = "Demasiado bajo";
+        printText("Demasiado bajo");
     } else {
-        text.innerHTML = "Has ganado campeona!!!";
+        printText("Has ganado campeona!!!");
     }
 }
 
