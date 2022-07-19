@@ -4,6 +4,7 @@ const input = document.querySelector('.js-input');
 const button = document.querySelector('.js-button');
 const text = document.querySelector('.js-text');
 const numberText = document.querySelector('.js-numberText');
+const formSubmit = document.querySelector('.js-button');
 
 let randomNumber;
 let attempt = 0;
@@ -43,4 +44,9 @@ function handleClick(ev) {
     numberText.innerHTML = `Numero de intentos: ${attempt}`;
 }
 
+function handleForm(event) {
+    event.preventDefault();
+}
+
 button.addEventListener('click' , handleClick);
+formSubmit.addEventListener("click", handleForm)
